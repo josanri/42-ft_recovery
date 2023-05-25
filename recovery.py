@@ -127,7 +127,7 @@ def get_connected_devices():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Forensics data, may be interesting for you")
-    parser.add_argument("time", choices=["day", "week", "month", "year"], help="Sets how old the data can be")
+    parser.add_argument("time", choices=["day", "week", "month", "year"], default="day", nargs="?", help="Sets how old the data can be")
     args = parser.parse_args()
     timestamp -= time_dict[args.time]
 
